@@ -72,11 +72,15 @@ section.alt { background: var(--sky); }
 .btn svg { flex: none; }
 
 /* ---------- hero with the wheel of life */
-.hero { padding: 34px 0 48px; overflow: hidden; }
-.hero-grid { display: grid; gap: 28px; align-items: center; }
-.hero h1 { max-width: 12ch; }
-.hero .lead { max-width: 36ch; }
-.wheel { width: min(100%, 420px); margin: 0 auto; }
+.hero { padding: 18px 0 44px; overflow: hidden; }
+/* Phone order: title, wheel, WhatsApp, Start module 1, then the text, so the wheel and both buttons show without scrolling */
+.hero-grid { display: grid; gap: 16px; }
+.hero h1 { max-width: 12ch; margin: 0; }
+.hero .lead { max-width: 36ch; margin: 8px 0 0; }
+.hero .btns { flex-direction: column; margin: 0; }
+.hero .btns .btn { width: 100%; }
+.hero .facts { margin-top: 0; }
+.wheel { width: min(100%, 300px, 42svh); margin: 0 auto; }
 .wheel a { outline: none; }
 .wheel .seg path { transition: transform .25s ease; transform-origin: 200px 200px; }
 .wheel a:focus-visible .seg path, .wheel a:hover .seg path { transform: scale(1.04); }
@@ -156,6 +160,15 @@ section.alt { background: var(--sky); }
 .quote p { font-size: 1.05rem; margin-bottom: .5em; }
 .quote figcaption { font-weight: 700; color: var(--c-ink); }
 
+/* ---------- hidden /free landing page */
+.page-hero.free { padding-top: 22px; text-align: center; }
+.page-hero.free h1 { margin-inline: auto; }
+.page-hero.free .lead { margin: 18px auto 0; max-width: 34rem; }
+.free-video { margin: 18px 0; border-radius: var(--radius); overflow: hidden; border: 2px solid var(--line); }
+.vid-slot { aspect-ratio: 16/9; display: grid; place-content: center; justify-items: center; gap: 10px; background: linear-gradient(135deg, #fff6dc, #ffe8f0 35%, #e0f6f4 70%, #e8edff); color: var(--ink-soft); font-weight: 700; }
+.free-btns { justify-content: center; }
+.free-btns .btn { width: 100%; max-width: 26rem; min-height: 58px; font-size: 1.08rem; }
+
 /* ---------- band + footer */
 .band { background: var(--ink); color: #fff; border-radius: 28px; padding: 28px 22px; }
 .band h2 { color: #fff; }
@@ -176,6 +189,9 @@ section.alt { background: var(--sky); }
   .quotes { grid-template-columns: 1fr 1fr; }
   .place { grid-template-columns: 1fr 1fr; }
   .join-bar { left: auto; right: 18px; bottom: 18px; padding: 0; background: none; }
+  .wheel { width: min(100%, 380px); }
+  .hero .btns { flex-direction: row; }
+  .hero .btns .btn { width: auto; }
   .join-bar .btn { width: auto; box-shadow: 0 12px 30px -10px rgba(27,31,75,.45); }
   .site-foot { padding-bottom: 40px; }
 }
@@ -194,8 +210,12 @@ section.alt { background: var(--sky); }
   .tabs a::before { width: 8px; height: 8px; }
   .head-in { flex-wrap: nowrap; }
   .hero { padding: 64px 0 72px; }
-  .hero-grid { grid-template-columns: 1.1fr .9fr; gap: 40px; }
-  .wheel { width: 100%; max-width: 480px; }
+  .hero-grid { grid-template-columns: 1.1fr .9fr; grid-template-areas: "title wheel" "lead wheel" "btns wheel" "facts wheel"; column-gap: 40px; row-gap: 18px; align-content: center; }
+  .hero h1 { grid-area: title; align-self: end; }
+  .hero .lead { grid-area: lead; }
+  .hero .btns { grid-area: btns; }
+  .hero .facts { grid-area: facts; align-self: start; }
+  .wheel { grid-area: wheel; align-self: center; width: 100%; max-width: 480px; }
   .vcard.wide { display: grid; grid-template-columns: 1.15fr 1fr; }
   .vcard.wide .vid { height: 100%; aspect-ratio: auto; min-height: 300px; }
   .vcard.wide .top { display: none; }
