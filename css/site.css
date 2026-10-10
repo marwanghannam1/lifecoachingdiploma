@@ -178,6 +178,7 @@ section.alt { background: var(--sky); }
 .gate h1 { margin: 14px auto 0; max-width: 14ch; }
 .gate .lead { margin: 16px auto 0; max-width: 34rem; }
 .gate .muted { margin: 10px auto 0; }
+.gate-btn-end { margin-top: 26px; }
 .gate .wheel { display: block; width: min(100%, 320px); margin: 18px auto 0; }
 
 /* ---------- band + footer */
