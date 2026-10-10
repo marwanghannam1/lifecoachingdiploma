@@ -91,8 +91,8 @@ section.alt { background: var(--sky); }
 .wheel .hub-s { fill: var(--ink-soft); font-family: var(--font-body); font-weight: 600; font-size: 12.5px; }
 @media (prefers-reduced-motion: no-preference) {
   .wheel .seg { animation: segIn .6s cubic-bezier(.2,.8,.3,1.2) both; transform-origin: 200px 200px; }
-  .wheel a:nth-of-type(2) .seg { animation-delay: .1s; } .wheel a:nth-of-type(3) .seg { animation-delay: .2s; }
-  .wheel a:nth-of-type(4) .seg { animation-delay: .3s; } .wheel a:nth-of-type(5) .seg { animation-delay: .4s; }
+  .wheel a:nth-of-type(2) .seg, .wheel .sl:nth-of-type(2) .seg { animation-delay: .1s; } .wheel a:nth-of-type(3) .seg, .wheel .sl:nth-of-type(3) .seg { animation-delay: .2s; }
+  .wheel a:nth-of-type(4) .seg, .wheel .sl:nth-of-type(4) .seg { animation-delay: .3s; } .wheel a:nth-of-type(5) .seg, .wheel .sl:nth-of-type(5) .seg { animation-delay: .4s; }
   @keyframes segIn { from { transform: scale(.4) rotate(-20deg); opacity: 0; } to { transform: none; opacity: 1; } }
 }
 .facts { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 18px 0 0; padding: 0; list-style: none; color: var(--ink-soft); font-weight: 600; font-size: .98rem; }
@@ -174,13 +174,11 @@ section.alt { background: var(--sky); }
 /* ---------- home page (/): one WhatsApp button, first thing on screen */
 .gate { padding: max(16px, env(safe-area-inset-top)) 0 40px; text-align: center; }
 .gate-btn { width: 100%; max-width: 28rem; min-height: 62px; font-size: 1.12rem; }
-.gate-note { margin: 10px auto 0; font-size: .95rem; color: var(--ink-soft); font-weight: 600; }
-.gate-brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 30px; font: 800 1.15rem var(--font-display); }
+.gate-brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 22px; font: 800 1.15rem var(--font-display); }
 .gate h1 { margin: 14px auto 0; max-width: 14ch; }
 .gate .lead { margin: 16px auto 0; max-width: 34rem; }
 .gate .muted { margin: 10px auto 0; }
-.gate .wheel { width: min(100%, 320px); margin-top: 26px; }
-.site-foot.bare { margin-top: 0; padding-bottom: 34px; text-align: center; }
+.gate .wheel { display: block; width: min(100%, 320px); margin: 18px auto 0; }
 
 /* ---------- band + footer */
 .band { background: var(--ink); color: #fff; border-radius: 28px; padding: 28px 22px; }
