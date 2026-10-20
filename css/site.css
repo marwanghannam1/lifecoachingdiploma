@@ -181,6 +181,9 @@ section.alt { background: var(--sky); }
 .gate .lead { margin: 16px auto 0; max-width: 34rem; }
 .gate .muted { margin: 10px auto 0; }
 .gate-btn-end { margin-top: 26px; }
+.gate h1:first-child { margin-top: 6px; }
+.gate h1 + .gate-btn { margin-top: 16px; }
+.gate-btn { text-align: center; line-height: 1.25; padding-block: 10px; }
 .gate .wheel { display: block; width: min(100%, 320px, 37svh); margin: 12px auto 0; }
 
 /* ---------- CPD accreditation */
