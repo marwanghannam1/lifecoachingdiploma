@@ -175,7 +175,7 @@ section.alt { background: var(--sky); }
 
 /* ---------- home page (/): one WhatsApp button, first thing on screen */
 .gate { padding: max(16px, env(safe-area-inset-top)) 0 40px; text-align: center; }
-.gate-btn { width: 100%; max-width: 28rem; min-height: 62px; font-size: 1.12rem; }
+.gate-btn { width: 100%; max-width: 32rem; min-height: 62px; font-size: 1.12rem; }
 .gate-brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 22px; font: 800 1.15rem var(--font-display); }
 .gate h1 { margin: 14px auto 0; max-width: 14ch; font-size: clamp(2rem, 1.5rem + 2.5vw, 3.2rem); line-height: 1.05; }
 .gate .lead { margin: 16px auto 0; max-width: 34rem; }
@@ -205,7 +205,35 @@ section.alt { background: var(--sky); }
 @media (min-width: 48rem) {
   .cpd-block { grid-template-columns: 220px 1fr; justify-items: start; text-align: left; align-items: center; gap: 28px; padding: 28px 32px; }
   .cpd-block img { width: 220px; }
+  .recog-block { grid-template-columns: 220px 1fr; }
+  .recog-logos { flex-direction: column; gap: 16px; }
+  .recog-block .recog-logos img { width: 180px; height: auto; }
+  .recog-block .recog-logos a + a img { width: 170px; }
 }
+
+/* ---------- trust strip: CPD, Foyht and BGi logos (kept above the fold on phones and laptops) */
+.trust { margin: 0; }
+.trust-logos { display: flex; align-items: center; gap: 18px; flex-wrap: nowrap; }
+.trust-logos img { width: auto; flex: none; }
+.t-cpd { height: min(68px, 9.5svh); }
+.t-foyht { height: min(50px, 7svh); }
+.t-bgi { height: min(34px, 4.8svh); }
+.trust-cap { margin: 8px 0 0; font-size: .92rem; font-weight: 600; color: var(--ink-soft); line-height: 1.35; }
+.trust-cap b { color: var(--ink); }
+.gate .trust { margin-top: 14px; }
+.gate .trust-logos { justify-content: center; }
+.gate .t-cpd { height: min(88px, 12svh); }
+.gate .t-foyht { height: min(56px, 7.5svh); }
+.gate .t-bgi { height: min(38px, 5.2svh); }
+.page-hero .trust { margin-top: 14px; }
+.recog-block { margin-top: 18px; }
+.recog-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 22px; }
+.recog-logos img { height: 72px; width: auto; }
+.recog-logos a + a img { height: 50px; }
+.foot-recog a { flex: none; display: block; }
+.foot-recog { flex-wrap: wrap; }
+.foot-recog img { width: 96px; }
+@media (max-width: 47.99rem) { .foot-recog span { flex-basis: 100%; } }
 
 /* ---------- privacy policy and other long text */
 .prose h2 { font-size: 1.35rem; margin: 30px 0 8px; }
@@ -263,8 +291,9 @@ section.alt { background: var(--sky); }
   .hero .lead { grid-area: lead; }
   .hero .btns { grid-area: btns; }
   .hero .facts { grid-area: facts; align-self: start; }
-  .hero .cpd-badge { grid-area: cpd; align-self: start; }
-  .hero .cpd-badge img { width: 104px; }
+  .hero .trust { grid-area: cpd; align-self: start; }
+  .hero .t-cpd { height: 92px; } .hero .t-foyht { height: 62px; } .hero .t-bgi { height: 42px; }
+  .hero .trust-logos { gap: 26px; }
   .wheel { grid-area: wheel; align-self: center; width: 100%; max-width: 480px; }
   .vcard.wide { display: grid; grid-template-columns: 1.15fr 1fr; }
   .vcard.wide .vid { height: 100%; aspect-ratio: auto; min-height: 300px; }
