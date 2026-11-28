@@ -375,3 +375,25 @@ section.alt { background: var(--sky); }
 .lt-anchor s { font: 800 clamp(1.4rem, 1.1rem + 1.4vw, 2rem)/1 var(--font-display); color: var(--ink-soft); text-decoration-thickness: 3px; text-decoration-color: #e5195d; }
 .lt-anchor b { font: 800 clamp(1.9rem, 1.4rem + 2.4vw, 2.9rem)/1 var(--font-display); color: #e5195d; }
 .lt-sticky .btn s { opacity: .8; font-weight: 600; margin-right: 2px; text-decoration-thickness: 2px; }
+
+/* lt above-the-fold: whole video visible on the first screen (phones and laptops) */
+.lt-top { font-size: .8rem; padding: 7px 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lt-hero { padding-top: 14px; }
+.lt-pills { gap: 6px; }
+.lt-pills span { font-size: .78rem; padding: 3px 10px; }
+.lt-kicker { margin: 12px 0 4px; font-size: .8rem; }
+.lt-hero h1 { font-size: clamp(1.6rem, 1.05rem + 2.6vw, 3.2rem); line-height: 1.08; }
+.lt-anchor { margin-top: 8px; }
+.lt-grid { margin-top: 14px; }
+.lt-video { position: relative; }
+.lt-vlabel { position: absolute; left: 10px; top: 10px; z-index: 2; padding: 5px 10px; border-radius: 99px; background: rgba(27,31,75,.85); font-size: .8rem; pointer-events: none; }
+.lt-video:has(iframe) .lt-vlabel { display: none; }
+@media (min-width: 64rem) {
+  .lt-top { font-size: .9rem; padding: 9px 16px; }
+  .lt-hero { padding-top: 20px; }
+  .lt-pills span { font-size: .85rem; padding: 4px 12px; }
+  .lt-hero h1 { max-width: none; }
+  .lt-grid { grid-template-columns: 1.35fr 1fr; margin-top: 18px; }
+}
+.lt-hero .lt-kicker { display: none; }
+@media (min-width: 22.5rem) { .lt-hero .lt-kicker { display: block; } }
