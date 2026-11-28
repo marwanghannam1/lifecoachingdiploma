@@ -363,3 +363,10 @@ section.alt { background: var(--sky); }
 .lt-stackbox .lt-kicker { margin-top: 0; }
 .lt-note { margin: 12px 0 0; font-size: .9rem; color: var(--ink-soft); text-align: center; }
 @media (min-width: 48rem) { .lt-stackbox { padding: 32px 36px; } }
+
+.lt-logos { display: flex; align-items: center; justify-content: center; gap: 18px; padding: 14px 0 10px; border-bottom: 1px dashed var(--line); }
+.lt-logos img { width: auto; flex: none; }
+.lt-logos img:nth-child(1) { height: 64px; }
+.lt-logos img:nth-child(2) { height: 46px; }
+.lt-logos img:nth-child(3) { height: 32px; }
+@media (min-width: 48rem) { .lt-logos { gap: 28px; } .lt-logos img:nth-child(1) { height: 76px; } .lt-logos img:nth-child(2) { height: 54px; } .lt-logos img:nth-child(3) { height: 38px; } }
