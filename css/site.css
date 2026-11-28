@@ -397,3 +397,14 @@ section.alt { background: var(--sky); }
 }
 .lt-hero .lt-kicker { display: none; }
 @media (min-width: 22.5rem) { .lt-hero .lt-kicker { display: block; } }
+
+.lt-final { padding-bottom: 40px; }
+.lt-testi { background: var(--sky); padding-bottom: 120px; }
+.lt-testi h2 { text-align: center; margin-bottom: 18px; }
+.lt-tgrid { display: grid; gap: 14px; }
+.lt-quote { margin: 0; background: #fff; border: 2px solid var(--line); border-radius: var(--radius); padding: 20px; position: relative; }
+.lt-quote::before { content: "“"; position: absolute; top: -6px; left: 14px; font: 800 3.6rem/1 var(--font-display); color: var(--pink); opacity: .35; }
+.lt-quote blockquote { margin: 0; font-size: 1.05rem; line-height: 1.55; color: var(--ink); }
+.lt-quote figcaption { margin-top: 12px; font-weight: 800; color: var(--cobalt); }
+@media (min-width: 48rem) { .lt-tgrid { grid-template-columns: 1fr 1fr; } .lt-testi { padding-bottom: 60px; } }
+@media (min-width: 64rem) { .lt-tgrid { grid-template-columns: repeat(3, 1fr); } }
