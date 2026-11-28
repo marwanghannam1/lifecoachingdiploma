@@ -4,7 +4,7 @@ document.addEventListener("click", (e) => {
   if (!btn) return;
   const box = btn.closest(".vid");
   const f = document.createElement("iframe");
-  f.src = `https://player.vimeo.com/video/${box.dataset.id}?autoplay=1&dnt=1&title=0&byline=0&portrait=0`;
+  f.src = `https://player.vimeo.com/video/${box.dataset.id}?autoplay=1&muted=0&dnt=1&title=0&byline=0&portrait=0`;
   f.title = box.dataset.title || "Video";
   f.allow = "autoplay; fullscreen; picture-in-picture";
   f.allowFullscreen = true;
